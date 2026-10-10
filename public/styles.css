@@ -196,3 +196,13 @@ h1, h2, h3, p { margin: 0; }
 .footer-links a { color: var(--muted); }
 .footer-links a:hover { color: var(--text); }
 .copyright { font: 500 12px 'DM Mono', monospace; letter-spacing: .06em; }
+
+/* Prose */
+.prose { max-width: 760px; padding-top: clamp(48px, 8vw, 96px); padding-bottom: clamp(64px, 10vw, 120px); flex: 1; }
+.prose h1 { font: 700 clamp(36px, 5vw, 56px)/1.05 'DM Sans'; letter-spacing: -.04em; margin: 14px 0 12px; }
+.prose h2 { font: 700 24px/1.2 'DM Sans'; letter-spacing: -.025em; margin: 48px 0 12px; }
+.prose h3 { font: 600 17px 'DM Sans'; margin: 24px 0 6px; }
+.prose p, .prose li { font: 400 16px/1.65 'DM Sans'; color: var(--muted); text-wrap: pretty; }
+.prose p + p, .prose ul + p { margin-top: 12px; }
+.prose ul { padding-left: 20px; margin: 0; }
+.prose .updated { font: 500 13px 'DM Mono', monospace; letter-spacing: .06em; margin-bottom: 32px; }
