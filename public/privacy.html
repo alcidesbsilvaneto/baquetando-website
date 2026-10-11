@@ -45,23 +45,32 @@
   <h3>Assinaturas</h3>
   <p>As compras são processadas pela Apple ou pelo Google. Usamos o RevenueCat para validar assinaturas e liberar o acesso correto; ele recebe o identificador da sua conta e o status das compras. Não recebemos os dados do seu cartão.</p>
 
-  <h3>Estatísticas de uso e relatórios de falhas</h3>
-  <p>O app compartilha estatísticas de uso e relatórios de falhas, feitos com o Firebase (Google Analytics, Crashlytics e Performance Monitoring). A coleta vem ativada por padrão e você pode desativá-la nas configurações do app a qualquer momento. Quando ativa, são coletados eventos de uso, telas visitadas, relatórios de erros e métricas de desempenho, com identificadores do aparelho e da instalação.</p>
+  <h3>Estatísticas de uso, relatórios de falhas e gravações de tela</h3>
+  <p>O app envia diagnósticos feitos com o Firebase (Google Analytics, Crashlytics e Performance Monitoring) e com o PostHog. A coleta vem ativada por padrão e você pode desativá-la a qualquer momento em Ajustes, na opção "Compartilhar diagnósticos e uso"; ao desativar, o app deixa de enviar novos dados. Quando ativa, são coletados:</p>
+  <ul>
+    <li>eventos de uso (por exemplo, abrir uma lição, iniciar e terminar uma prática ou mudar um ajuste), telas visitadas e os controles que você toca, identificados por um nome interno e nunca pelo texto que você escreveu;</li>
+    <li>relatórios de erros e falhas, com a sequência de chamadas, as últimas ações antes do erro e registros técnicos, sem caminhos de arquivos do aparelho;</li>
+    <li>métricas de desempenho, como tempo de abertura do app, latência do áudio e o servidor, o endereço sem parâmetros, o status e a duração das requisições de rede;</li>
+    <li>características do aparelho: modelo, fabricante, versão do sistema e do app, tamanho da tela, idioma, fuso horário, memória e espaço livres, nível de bateria, modo de economia de energia e ajustes de acessibilidade do sistema (tamanho da fonte, redução de movimento e leitor de tela);</li>
+    <li>gravações da tela do app, com os textos que você digita, as imagens e os dados da conta ocultos, e pausadas enquanto você toca uma lição;</li>
+    <li>respostas a pesquisas de satisfação, somente se você decidir respondê-las.</li>
+  </ul>
+  <p>Esses dados são associados a um identificador anônimo da instalação e, quando você está com a conta ativa, ao identificador da sua conta, nunca ao seu e-mail ou nome. O PostHog usa o endereço IP apenas para estimar país e cidade e não o armazena.</p>
 
   <h2>Como usamos os dados</h2>
   <ul>
     <li>Fornecer o app, a análise de tempo e o seu progresso;</li>
     <li>Sincronizar seus dados entre aparelhos e manter o backup;</li>
     <li>Gerenciar assinaturas e acesso;</li>
-    <li>Corrigir erros e melhorar o app, se a coleta de estatísticas e falhas estiver ativada.</li>
+    <li>Corrigir erros, medir o desempenho e melhorar o app, se a coleta de diagnósticos e uso estiver ativada.</li>
   </ul>
   <p>Não vendemos seus dados nem os usamos para publicidade.</p>
 
   <h2>Com quem compartilhamos</h2>
-  <p>Usamos prestadores que tratam dados em nosso nome: Supabase (armazenamento e sincronização), Google/Firebase (autenticação, estatísticas e falhas), Apple (login e compras) e RevenueCat (assinaturas). Esses prestadores podem processar dados fora do Brasil; nesses casos, adotamos as salvaguardas previstas na LGPD.</p>
+  <p>Usamos prestadores que tratam dados em nosso nome: Supabase (armazenamento e sincronização), Google/Firebase (autenticação, estatísticas e falhas), PostHog (estatísticas de uso, falhas e gravações de tela, em servidores nos Estados Unidos), Apple (login e compras) e RevenueCat (assinaturas). Esses prestadores podem processar dados fora do Brasil; nesses casos, adotamos as salvaguardas previstas na LGPD.</p>
 
   <h2>Por quanto tempo guardamos</h2>
-  <p>Mantemos seus dados enquanto sua conta existir. Ao excluir a conta, apagamos os dados sincronizados, salvo o que formos obrigados a manter por lei.</p>
+  <p>Mantemos seus dados enquanto sua conta existir. Ao excluir a conta, apagamos os dados sincronizados, salvo o que formos obrigados a manter por lei. As gravações de tela ficam por 30 dias; os demais dados de diagnóstico e uso seguem o prazo de retenção do Firebase e do PostHog. Para pedir a exclusão dos dados de diagnóstico ligados ao identificador da sua conta, escreva para o e-mail de contato.</p>
 
   <h2>Seus direitos</h2>
   <p>Nos termos da Lei Geral de Proteção de Dados (Lei 13.709/2018), você pode confirmar a existência de tratamento, acessar, corrigir, portar e eliminar seus dados, e revogar consentimentos. Você pode excluir sua conta e seus dados dentro do app. Para qualquer outro pedido, fale com a gente pelo e-mail acima.</p>
